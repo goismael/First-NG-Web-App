@@ -7,7 +7,7 @@ export class AboutService {
   info = {
     name: "Ismael Ouedraogo",
     email: "ismael@ismaelo.com",
-    tel: "(216) 904-9831"
+    tel: "(111) 222-3333"
   }
 
   comments = [

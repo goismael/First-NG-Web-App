@@ -22,7 +22,7 @@ export class AboutComponent implements OnInit{
 
   onAddComment(c){
     this.aboutService.addComment(c);
-    c.date = new Date();
+   // c.date = new Date();
     this.comments=this.aboutService.getAllComments();
     this.comments.push(c);
     this.comment.message="";
