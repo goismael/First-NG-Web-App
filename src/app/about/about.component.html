@@ -11,16 +11,27 @@
                     <li class="list-group-item"> Telephone: <strong>{{info.tel}}</strong></li>
                     <li class="list-group-item"> Email: <strong>{{info.email}}</strong></li>
                 </ul>
-            </div>
 
+            </div>
             <div>
+                <div>
+                    <form #f="ngForm" (ngSubmit)="onAddComment(f.value)">
+                        <div class="form-group">
+                            <label class="custom-control-label">Comments: </label>
+                            <input required name="message" ngModel type=" text " [(ngModel)]="comment.message">
+                            <button [disabled]="!f.valid" type="submit" class="btn btn-primary "> 
+                                 Add a comment 
+                                </button>
+                        </div>
+                    </form>
+                </div>
                 <h3>Comments:</h3>
-                <ul class="list-group">
-                    <li class="list-group-item" *ngFor="let c of comments">
+                <ul class="list-group ">
+                    <li class="list-group-item " *ngFor="let c of comments ">
                         {{c.message}}
-                        <span class="badge">{{c.date|date: 'dd/MM/yyyy:HH:mm:ss'}}</span>
-                        <li class="list-group-item"> Name: <strong> {{info.name}}</strong></li>
-                        <li class="list-group-item"> Contact: <strong>{{info.tel}}</strong></li>
+                        <span class="badge ">{{c.date|date: 'dd/MM/yyyy:HH:mm:ss'}}</span>
+                        <li class="list-group-item "> Name: <strong> {{info.name}}</strong></li>
+                        <li class="list-group-item "> Contact: <strong>{{info.tel}}</strong></li>
                 </ul>
             </div>
 
