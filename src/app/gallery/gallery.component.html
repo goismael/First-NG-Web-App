@@ -1,0 +1,15 @@
+<p></p>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Gallery Component</div>
+        <div class="panel-body">Gallery</div>
+
+        <form #f="ngForm" (ngSubmit)="onSearch(f.value)">
+            <div class="form-group">
+                <label>Key Word </label>
+                <input type="text" name="word" ngModel required>
+                <button type="submit" class=" btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+</div>

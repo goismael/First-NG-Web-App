@@ -1,4 +1,10 @@
-<div class="container">
-    <button class="btn btn-primary">About</button>
-    <button class="btn btn-primary">Contacts</button>
+<div class="container spacer">
+    <div class="container">
+        <button routerLink="/about " class="btn btn-primary ">About</button>
+        <button routerLink="/contact " class="btn btn-primary ">Contacts</button>
+        <button routerLink="/gallery " class="btn btn-primary ">Gallery</button>
+        <div class="container spacer ">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
