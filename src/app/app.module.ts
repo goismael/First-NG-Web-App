@@ -15,7 +15,7 @@ const routes:Routes=[
   {path: 'about', component:AboutComponent},
   {path: 'contact', component:ContactComponent},
   {path: 'gallery', component:GalleryComponent},
-  {path: '', redirectTo:'/about', pathMatch: 'full'},
+  {path: ' ', redirectTo:'/about', pathMatch: 'full'},
 ]
 
 @NgModule({
@@ -26,7 +26,7 @@ const routes:Routes=[
     GalleryComponent
   ],
   imports: [
-    BrowserModule, FormsModule,RouterModule.forRoot(routes), HttpClientModule
+    BrowserModule, FormsModule,RouterModule.forRoot(routes), HttpClientModule, 
   ],
   providers: [AboutService, ContactService],
   bootstrap: [AppComponent]
